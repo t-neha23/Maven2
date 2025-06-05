@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'ansible-playbook -i inventory.ini deploy.yml'
+                bat 'ansible-playbook -i inventory.ini deploy.yml'
             }
         }
     }
