@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/t-neha23/Maven2.git'
+                git branch: 'main', url: 'https://github.com/t-neha23/Maven2.git'
             }
         }
 
